@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Generation</title>
+    <link rel="stylesheet" href="style.css">
+    <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="#">
+    <meta property="og:title" content="Lead Generation">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://example.com">
+    <meta property="og:image" content="#" id="og-image">
+    <meta property="og:description" content="Sign up for our newsletter to stay updated.">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Sign Up for Newsletter</h2>
+        <img id="newsletter-image" src="#" alt="Newsletter Icon" width="100%">
+        <form id="leadForm">
+            <label for="name">Name</label>
+            <span id="nameCharCount">(0/50)</span>
+            <input type="text" id="name" name="name" 
+                placeholder="Enter your name" 
+                maxlength="50"
+                required>
+
+            <label for="mobile">Mobile Number</label>
+            <div class="input-container">
+                <input type="tel" id="mobile" 
+                    name="mobile" 
+                    placeholder="Enter your mobile number" 
+                    maxlength="11"
+                    required
+                    disabled>
+                <span id="mobileStatus" class="status-icon"></span>
+            </div>
+
+            <label for="email">Email</label>
+            <div class="input-container">
+                <input type="email" id="email"
+                 name="email" placeholder="Enter your email" required disabled>
+                <span id="emailStatus" class="status-icon"></span>
+            </div>
+
+            <input type="hidden" id="location" name="location" readonly placeholder="Allow location access">
+
+            <div class="terms-container">
+                <label class="terms-label" for="terms">
+                    <input type="checkbox" 
+                    id="terms" name="terms" 
+                    required disabled>
+                    I agree to the <a href="#" id="termsLink">T & C*</a></label>
+            </div>
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <p>All the terms and conditions go here...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dynamicFavicon.js"></script>
+</body>
+
+</html>

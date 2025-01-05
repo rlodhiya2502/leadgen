@@ -1,0 +1,9 @@
+# FILE: /php-lead-generation/php-lead-generation/.htaccess
+RewriteEngine On
+
+# Redirect all requests to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.html [QSA,L]
+
+# Handle requests to submit-lead.php
+RewriteRule ^submit-lead$ submit-lead.php [L]

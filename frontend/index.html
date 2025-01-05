@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving School Lead Generation</title>
+    <meta name="description" content="Book your driving lesson with our professional driving school.">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <meta property="og:title" content="Driving School Lead Generation">
+    <meta property="og:description" content="Book your driving lesson with our professional driving school.">
+    <meta property="og:url" content="http://example.com/leadgen">
+    <meta property="og:image" content="http://example.com/leadgen/cover.jpg">
+    <meta property="og:type" content="website">
+    <!-- add favicon link here -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script src="assets/scripts/ogReader.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Book Your Driving Lesson</h1>
+    </header>
+    <img src="assets/images/drivingSchool.svg" alt="Driving School" />
+    <main>
+        <form id="leadForm" action="../backend/submit-lead.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <a href="https://wa.me/1234567890?text=I%20am%20interested%20in%20driving%20lessons" 
+                target="_blank" 
+                rel="noopener">Contact us on WhatsApp</a>
+    </main>
+    <script src="assets/scripts/leadForm.js"></script>
+</body>
+</html>
